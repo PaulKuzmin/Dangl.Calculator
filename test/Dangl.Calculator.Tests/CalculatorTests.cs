@@ -699,6 +699,18 @@ namespace Dangl.Calculator.Tests
             {
                 RunTest("(+2)", 2);
             }
+
+            [Fact]
+            public void Calc_maximum()
+            {
+                RunTest("Max(12,346;2)", 12.346);
+            }
+
+            [Fact]
+            public void Calc_minimum()
+            {
+                RunTest("Min(12,346;2)", 2);
+            }
         }
 
         public class Expressions

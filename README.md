@@ -75,6 +75,8 @@ public void Example()
 | Expression                               |                                       |
 |------------------------------------------|---------------------------------------|
 `FLOOR  expression`                        | Round down to zero accuracy           |
+`MAX '(' expression ';' expression ')'`    | Greatest of expr_1 with expr_2
+`MIN '(' expression ';' expression ')'`    | Smallest of expr_1 with expr_2
 `CEIL  expression`                         | Round up to zero accuracy             |
 `ABS  expression`                          | Absolute value                        |
 `ROUNDK '(' expression ';' expression ')'` | Round expr_1 with expr_2 accuracy     |

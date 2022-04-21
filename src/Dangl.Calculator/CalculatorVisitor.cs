@@ -247,5 +247,15 @@ namespace Dangl.Calculator
         {
             return Math.Truncate(Visit(context.expression(0)) / Visit(context.expression(1)));
         }
+
+        public override double VisitMax(CalculatorParser.MaxContext context)
+        {
+            return Math.Max(Visit(context.expression(0)), Visit(context.expression(1)));
+        }
+
+        public override double VisitMin(CalculatorParser.MinContext context)
+        {
+            return Math.Min(Visit(context.expression(0)), Visit(context.expression(1)));
+        }
     }
 }
