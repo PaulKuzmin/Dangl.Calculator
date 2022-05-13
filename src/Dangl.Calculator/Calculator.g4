@@ -85,8 +85,9 @@ expression    :    SUB expression                              #Unary          /
               |    PI '()'?                                    #Pi             // Mathematical constant pi = 3,141593
               |    EULER                                       #Euler          // Mathematical constant e = 2,718282
               |    SUBSTITUTION                                #Substitution
-              |    MAX '(' expression ';' expression ')'       #Max        // Greatest of expr_1 with expr_2
-              |    MIN '(' expression ';' expression ')'       #Min        // Smallest of expr_1 with expr_2
+              |    MAX '(' expression ';' expression ')'       #Max             // Greatest of expr_1 with expr_2
+              |    MIN '(' expression ';' expression ')'       #Min             // Smallest of expr_1 with expr_2
+              |    RANDOM '(' expression ';' expression ')'    #Random          // Random int values From To
               ;
 
 // End of file
@@ -145,6 +146,7 @@ COM         : COMMENT              -> skip    ;
 SUBSTITUTION: '#' ([a-z] | [A-Z] | [äÄöÖüÜ] | [0-9])+ ;
 MAX         : [Mm][Aa][Xx]                    ;
 MIN         : [Mm][Ii][Nn]                    ;
+RANDOM      : [Rr][Aa][Nn][Dd][Oo][Mm]        ;
 SEMICOLON   : ';'                             ;
 INVALID     : .                               ;
 

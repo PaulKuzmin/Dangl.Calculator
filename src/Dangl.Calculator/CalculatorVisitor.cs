@@ -257,5 +257,15 @@ namespace Dangl.Calculator
         {
             return Math.Min(Visit(context.expression(0)), Visit(context.expression(1)));
         }
+
+        public override double VisitRandom(CalculatorParser.RandomContext context)
+        {
+            var r = new Random();
+
+            var minValue = Convert.ToInt32(Visit(context.expression(0)));
+            var maxValue = Convert.ToInt32(Visit(context.expression(1)));
+
+            return r.Next(minValue, maxValue);
+        }
     }
 }

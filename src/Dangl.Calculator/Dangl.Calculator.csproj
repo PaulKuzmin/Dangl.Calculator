@@ -4,7 +4,7 @@
     <Description>Package to evaluate mathematical formulas from strings</Description>
     <Copyright>(c) $([System.DateTime]::Now.Year) Georg Dangl</Copyright>
     <AssemblyTitle>Dangl.Calculator</AssemblyTitle>
-    <Authors>Georg Dangl</Authors>
+    <Authors>Georg Dangl, Pavel Kuzmin</Authors>
     <TargetFrameworks>netstandard2.0;netstandard1.1;net45;net40</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Dangl.Calculator</AssemblyName>
@@ -19,6 +19,8 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Dangl.Calculator.snk</AssemblyOriginatorKeyFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
